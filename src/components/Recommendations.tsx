@@ -28,15 +28,17 @@ const Recommendations: React.FC<RecommendationsProps> = ({ formState, loading })
 
     return dayText !== null && nightText !== null && accessoriesText !== null ?
         <div className="flex flex-col gap-2 ml-4 w-80 py-2">
-            <h1 className='font-bold text-2xl'>Roupas recomendadas</h1>
             {dayText && (
-                <div className="flex flex-row items-start gap-4">
-                    <Image src="/Day.png" width={40} height={40} alt='' className='mt-2'/>
-                    <div className=''>
-                        <h3 className='font-bold text-xl'>Dia</h3>
-                        <ReactMarkdown className='font-normal text-sm text-justify'>
-                            {dayText}
-                        </ReactMarkdown>
+                <div className="flex flex-col gap-2">
+                    <h1 className='font-bold text-2xl'>Roupas recomendadas</h1>
+                    <div className="flex flex-row items-start gap-4">
+                        <Image src="/Day.png" width={40} height={40} alt='' className='mt-2'/>
+                        <div className=''>
+                            <h3 className='font-bold text-xl'>Dia</h3>
+                            <ReactMarkdown className='font-normal text-sm text-justify'>
+                                {dayText}
+                            </ReactMarkdown>
+                        </div>
                     </div>
                 </div>
             )}
@@ -64,7 +66,10 @@ const Recommendations: React.FC<RecommendationsProps> = ({ formState, loading })
             )}
         </div>
 
-        : null
+        : 
+        <div>
+
+        </div>
 };
 
 export default Recommendations;

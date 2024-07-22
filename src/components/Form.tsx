@@ -74,20 +74,6 @@ export default function Form() {
             <Input id="destination" placeholder="Where are you going?" onChange={handleChange} />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="date">Travel Date</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant="outline" className="w-full justify-start font-normal">
-                  <CalendarDaysIcon className="mr-2 h-4 w-4" />
-                  {formState.date ? formState.date : "Pick a date"}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar mode="single" onSelect={(date) => handleDateChange(date)} />
-              </PopoverContent>
-            </Popover>
-          </div>
-          <div className="grid gap-2">
             <Label htmlFor="gender">Gender</Label>
             <RadioGroup id="gender" defaultValue="male" className="flex items-center gap-4" onValueChange={handleGenderChange}>
               <Label htmlFor="gender-male" className="flex items-center gap-2 cursor-pointer">
